@@ -1,0 +1,41 @@
+ loguinSenha.py
+import customtkinter
+
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("dark-blue")
+
+janelaPrincipal = customtkinter.CTk()
+janelaPrincipal.geometry("500x350")
+
+
+def loguin():
+    print("test")
+
+
+telaPrincipal = customtkinter.CTkFrame(master=janelaPrincipal)
+telaPrincipal.pack(pady=20, padx=60, fill="both", expand=True)
+
+
+rotuloTexto = customtkinter.CTkLabel(master=telaPrincipal, text="Interface simples\n\n Diga oi")
+rotuloTexto.pack(pady=100, padx=100)
+
+rotulo = customtkinter.CTkFont(family="Roboto", size=24)
+
+rotulo = customtkinter.CTkLabel(master=telaPrincipal, text="login system", font=rotulo)
+rotulo.pack(pady=12, padx=10)
+
+
+
+entradaSenha = customtkinter.CTkEntry(master=telaPrincipal, placeholder_text="password", show="*")
+entradaSenha.pack(pady=12, padx=10)
+
+botaoLoguin = customtkinter.CTkButton(master=telaPrincipal, text="login", command=loguin)
+botaoLoguin.pack(pady=12, padx=10)
+
+lembrarBotao = customtkinter.CTkCheckBox(master=telaPrincipal, text="remember me")
+lembrarBotao.pack(pady=12, padx=10)
+
+
+
+
+janelaPrincipal.mainloop()
