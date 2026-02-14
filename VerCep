@@ -1,0 +1,10 @@
+ VerCep.py
+import requests
+
+print("verificando o endereço")
+cep = input("digite o cep")
+if len(cep) != 8:
+    print("cep inválido")
+    exit()
+consulta = requests.get(f'https://viacep.com.br/ws/1{cep}/json')
+print(consulta.json())
